@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience premium Indian, South Indian, North Indian, and Chinese culinary delights at Spice Garden, Vijayawada. Book a table or order online.">
+    <meta name="keywords" content="Spice Garden, Vijayawada Restaurant, Indian Food, South Indian, North Indian, Chinese Food, Biryani, Table Booking, Online Food Delivery">
+    <meta name="author" content="Spice Garden">
+    <title>Spice Garden - Premium Restaurant | Vijayawada, Andhra Pradesh</title>
+    
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Spice Garden - Premium Restaurant in Vijayawada">
+    <meta property="og:description" content="Taste the authentic Indian, South Indian, and Chinese flavors with a premium dining experience.">
+    <meta property="og:type" content="website">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- FontAwesome 6 for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         HEADER / STICKY NAVIGATION BAR
+         ========================================== -->
+    <header id="home">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container">
+                <a class="navbar-brand text-light d-flex align-items-center" href="#home" aria-label="Spice Garden Home">
+                    <i class="fa-solid fa-seedling text-gold me-2" aria-hidden="true"></i>
+                    <span>Spice</span>Garden
+                </a>
+                
+                <div class="d-flex align-items-center order-lg-last gap-3">
+                    <!-- Shopping Cart Toggler -->
+                    <button class="cart-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" aria-controls="cartDrawer" aria-label="Open Shopping Cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    
+                    <!-- Quick Call to Action -->
+                    <a href="#reservation" class="btn btn-premium btn-premium-gold d-none d-sm-inline-block">Book A Table</a>
+                    
+                    <!-- Mobile Hamburger Toggler -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reviews">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reservation">Reservation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-12 reveal-on-scroll active">
+                    <span class="hero-subtitle">Welcome to Spice Garden</span>
+                    <h1 class="hero-title">Experience the Taste of <span>Authentic Indian</span> Culinary Art</h1>
+                    <p class="hero-desc">Serving premium Indian, South Indian, traditional North Indian, and spicy Chinese delicacies. Freshly sourced ingredients, cooked by passionate master chefs in Vijayawada.</p>
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-premium btn-premium-red">View Menu</a>
+                        <a href="#reservation" class="btn btn-premium btn-premium-outline">Book Table</a>
+                        <button type="button" class="btn btn-premium btn-premium-gold" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         QUICK INFO STRIP
+         ========================================== -->
+    <div class="info-strip">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6 text-center text-md-start">
+                    <div class="info-item justify-content-center justify-content-md-start">
+                        <i class="fa-solid fa-clock info-icon" aria-hidden="true"></i>
+                        <div>
+                            <div class="info-title">Opening Hours</div>
+                            <div class="info-text text-light">Mon - Sun: 11:00 AM - 11:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 text-center text-md-start">
+                    <div class="info-item justify-content-center justify-content-md-start">
+                        <i class="fa-solid fa-location-dot info-icon" aria-hidden="true"></i>
+                        <div>
+                            <div class="info-title">Our Location</div>
+                            <div class="info-text text-light">Labbipet, MG Road, Vijayawada</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center text-md-start">
+                    <div class="info-item justify-content-center justify-content-md-start">
+                        <i class="fa-solid fa-phone-volume info-icon" aria-hidden="true"></i>
+                        <div>
+                            <div class="info-title">Call Reservation</div>
+                            <div class="info-text text-light">+91 866 555 0199</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         POPULAR DISHES / SPECALS PREVIEW
+         ========================================== -->
+    <section class="py-5" style="background-color: #FFFFFF;">
+        <div class="container">
+            <div class="text-center mb-5 reveal-on-scroll">
+                <span class="text-red font-heading italic text-uppercase letter-spacing-1">Chef Recommendations</span>
+                <h2 class="section-title text-dark">Most Popular Dishes</h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Popular 1: Biryani -->
+                <div class="col-lg-4 col-md-6 col-sm-12 reveal-on-scroll">
+                    <div class="menu-card">
+                        <div class="menu-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=600&auto=format&fit=crop" alt="Chicken Biryani" class="menu-img">
+                            <span class="menu-badge">MAIN COURSE</span>
+                            <div class="veg-indicator nonveg"></div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h4 class="menu-title mb-0">Chicken Biryani</h4>
+                                <div class="rating-stars"><i class="fa-solid fa-star"></i> 4.9</div>
+                            </div>
+                            <p class="menu-desc">Fragrant basmati rice layered with juicy spiced chicken, slow-cooked in traditional dum style with saffron and herbs.</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">320</span>
+                                <button class="btn-add-cart" onclick="addToCart('m1')" aria-label="Add Chicken Biryani to Cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Popular 2: Paneer Tikka -->
+                <div class="col-lg-4 col-md-6 col-sm-12 reveal-on-scroll">
+                    <div class="menu-card">
+                        <div class="menu-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=600&auto=format&fit=crop" alt="Paneer Tikka" class="menu-img">
+                            <span class="menu-badge">STARTERS</span>
+                            <div class="veg-indicator veg"></div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h4 class="menu-title mb-0">Paneer Tikka</h4>
+                                <div class="rating-stars"><i class="fa-solid fa-star"></i> 4.8</div>
+                            </div>
+                            <p class="menu-desc">Cottage cheese cubes marinated in yogurt, mustard oil, and ground spices, grilled to perfection in the clay oven.</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">250</span>
+                                <button class="btn-add-cart" onclick="addToCart('s2')" aria-label="Add Paneer Tikka to Cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular 3: Andhra Meals -->
+                <div class="col-lg-4 col-md-6 col-sm-12 reveal-on-scroll">
+                    <div class="menu-card">
+                        <div class="menu-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?q=80&w=600&auto=format&fit=crop" alt="Andhra Royal Meals" class="menu-img">
+                            <span class="menu-badge">SOUTH INDIAN</span>
+                            <div class="veg-indicator veg"></div>
+                        </div>
+                        <div class="menu-content">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h4 class="menu-title mb-0">Andhra Meals</h4>
+                                <div class="rating-stars"><i class="fa-solid fa-star"></i> 4.9</div>
+                            </div>
+                            <p class="menu-desc">Traditional heavy platter featuring hot rice, clarified butter (ghee), podi, sambar, rasam, curd, gongura chutney, and dual curries.</p>
+                            <div class="menu-footer">
+                                <span class="menu-price">220</span>
+                                <button class="btn-add-cart" onclick="addToCart('so5')" aria-label="Add Andhra Meals to Cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TODAY'S SPECIAL BANNER
+         ========================================== -->
+    <div class="special-banner">
+        <div class="container text-center py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 special-content reveal-on-scroll">
+                    <span class="text-gold font-heading italic fs-4 d-block mb-2">Today's Special Recommendation</span>
+                    <h3>Premium Royal Tandoori Platter</h3>
+                    <p class="mb-4 text-light-muted">A royal assortment of Chicken Tikka, Paneer Tikka, Tandoori Prawns, Seekh Kebab, and Fish Amritsari. Hand-glazed with local ghee and served with mint chutney and garlic naan bread.</p>
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <span class="font-heading fs-3 text-gold">Only at ₹590</span>
+                        <a href="#menu" class="btn btn-premium btn-premium-gold">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         ABOUT US SECTION
+         ========================================== -->
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 col-sm-12 order-lg-first reveal-on-scroll">
+                    <div class="about-img-box">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=600&auto=format&fit=crop" class="img-fluid mb-3" alt="Spice Garden Kitchen Chefs">
+                                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop" class="img-fluid" alt="Indian Food Cooking">
+                            </div>
+                            <div class="col-6 pt-4">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop" class="img-fluid mb-3" alt="Spice Garden Dining Area">
+                                <img src="https://images.unsplash.com/photo-1560624052-449f5ddf0c31?q=80&w=600&auto=format&fit=crop" class="img-fluid" alt="Fresh spices & herbs">
+                            </div>
+                        </div>
+                        <div class="about-experience-badge">
+                            <span class="exp-years">12+</span>
+                            <span class="exp-text">Years of Culinary Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-sm-12 reveal-on-scroll">
+                    <span class="text-red font-heading italic text-uppercase letter-spacing-1">Discover Our Story</span>
+                    <h2 class="section-title text-dark text-start mb-4">About Spice Garden</h2>
+                    <p class="lead">Serving Vijayawada a magical mix of authentic recipes, seasoned with passion, and served with unconditional warmth since 2014.</p>
+                    <p class="text-muted mb-4">Spice Garden represents the culinary heritage of India. Our hand-crafted menu bridges traditional South Indian spices, North Indian tandoori clay-oven roasting, and high-intensity Chinese wok-tossed favorites. We source our whole spices from the organic spice hills of Andhra Pradesh and Kerala, ensuring every plate is packed with real flavor and aroma.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <div class="feature-icon-wrapper">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h5 class="feature-title">100% Fresh & Organic Ingredients</h5>
+                                <p class="feature-desc">We never use artificial colors or MSGs. Our ingredients, oil, and meats are sourced fresh every morning.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon-wrapper">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <div>
+                                <h5 class="feature-title">Master & Experienced Chefs</h5>
+                                <p class="feature-desc">Our culinary wizards carry decades of experience preparing dum biryanis and specialized tandoori platters.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon-wrapper">
+                                <i class="fa-solid fa-champagne-glasses"></i>
+                            </div>
+                            <div>
+                                <h5 class="feature-title">Welcoming & Premium Atmosphere</h5>
+                                <p class="feature-desc">An elegant interior styled with dark charcoal accents and warm lighting, perfect for families and celebrations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         MENU CATEGORIES & LIVE SEARCH FILTER
+         ========================================== -->
+    <section id="menu" style="background-color: #FFFFFF;">
+        <div class="container">
+            <div class="text-center mb-5 reveal-on-scroll">
+                <span class="text-red font-heading italic text-uppercase letter-spacing-1">Culinary Masterpieces</span>
+                <h2 class="section-title text-dark">Explore Our Menu</h2>
+            </div>
+
+            <!-- Search Field -->
+            <div class="menu-search-container reveal-on-scroll">
+                <div class="search-input-group">
+                    <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+                    <input type="text" id="menu-search" placeholder="Search delicious dishes..." aria-label="Search Menu Items">
+                </div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="menu-categories reveal-on-scroll">
+                <button class="category-btn active" data-filter="all">All Dishes</button>
+                <button class="category-btn" data-filter="starters">Starters</button>
+                <button class="category-btn" data-filter="main-course">Main Course</button>
+                <button class="category-btn" data-filter="south-indian">South Indian</button>
+                <button class="category-btn" data-filter="desserts">Desserts</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="row g-4" id="menu-grid">
+                <!-- Dynamically filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         IMAGE GALLERY SECTION
+         ========================================== -->
+    <section id="gallery" class="bg-dark-section">
+        <div class="container">
+            <div class="text-center mb-5 reveal-on-scroll">
+                <span class="text-gold font-heading italic text-uppercase letter-spacing-1">Visual Delights</span>
+                <h2 class="section-title text-light">Spice Garden Gallery</h2>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="gallery-filter-container reveal-on-scroll">
+                <button class="category-btn active gallery-filter-btn" data-filter-gallery="all">All Photos</button>
+                <button class="category-btn gallery-filter-btn" data-filter-gallery="food">Signature Food</button>
+                <button class="category-btn gallery-filter-btn" data-filter-gallery="interior">Restaurant Interior</button>
+                <button class="category-btn gallery-filter-btn" data-filter-gallery="chef">Master Chefs</button>
+                <button class="category-btn gallery-filter-btn" data-filter-gallery="events">Special Events</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4" id="gallery-grid">
+                <!-- Dynamically filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         REVIEWS / TESTIMONIALS SECTION
+         ========================================== -->
+    <section id="reviews" style="background-color: #FFFFFF;">
+        <div class="container">
+            <div class="text-center mb-5 reveal-on-scroll">
+                <span class="text-red font-heading italic text-uppercase letter-spacing-1">Happy Guests</span>
+                <h2 class="section-title text-dark">Customer Testimonials</h2>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 reveal-on-scroll">
+                    <div class="review-card h-100">
+                        <i class="fa-solid fa-quote-right quote-icon" aria-hidden="true"></i>
+                        <div class="reviewer-profile">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Ravi Teja" class="reviewer-img" loading="lazy">
+                            <div>
+                                <h5 class="reviewer-name">Ravi Teja</h5>
+                                <div class="rating-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Spice Garden has hands down the best Biryani in Vijayawada! The Dum Chicken Biryani is absolutely stellar. The long-grain rice is aromatic, non-greasy, and the chicken is super tender. Highly recommend their Paneer starters too!"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 reveal-on-scroll">
+                    <div class="review-card h-100">
+                        <i class="fa-solid fa-quote-right quote-icon" aria-hidden="true"></i>
+                        <div class="reviewer-profile">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="Kavya Sri" class="reviewer-img" loading="lazy">
+                            <div>
+                                <h5 class="reviewer-name">Kavya Sri</h5>
+                                <div class="rating-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Love the premium ambiance and the hospitality of the staff. We had a family dinner for my parents' anniversary, and everything was stellar. The Andhra Meals and South Indian dosa taste authentic. Will definitely visit again."</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 reveal-on-scroll">
+                    <div class="review-card h-100">
+                        <i class="fa-solid fa-quote-right quote-icon" aria-hidden="true"></i>
+                        <div class="reviewer-profile">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Vikram Rao" class="reviewer-img" loading="lazy">
+                            <div>
+                                <h5 class="reviewer-name">Vikram Rao</h5>
+                                <div class="rating-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Outstanding online ordering experience! I ordered butter chicken and garlic naan for delivery. The ordering system is quick, delivery was on-time, and the food was piping hot when it arrived. The creaminess of the gravy was top-tier."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TABLE RESERVATION SECTION
+         ========================================== -->
+    <section id="reservation" class="bg-dark-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 col-sm-12 reveal-on-scroll">
+                    <span class="text-gold font-heading italic text-uppercase letter-spacing-1">Secure A Seating</span>
+                    <h2 class="section-title text-light text-start mb-4">Book A Table</h2>
+                    <p class="mb-4 text-light-muted">Guarantee your dining spot ahead of time, especially during weekends. Host business meetings, family functions, or intimate dinners under our warm lights. Choose date, time, and guest count and receive an instant digital reference number.</p>
+                    
+                    <div class="contact-detail-box">
+                        <div class="contact-detail-item">
+                            <i class="fa-solid fa-triangle-exclamation contact-detail-icon text-gold" aria-hidden="true"></i>
+                            <div>
+                                <div class="contact-detail-title text-light">Important Seating Policy</div>
+                                <div class="contact-detail-desc">Reservations are held for a maximum of 15 minutes after the scheduled seating time. If you run late, kindly call us.</div>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <i class="fa-solid fa-circle-question contact-detail-icon text-gold" aria-hidden="true"></i>
+                            <div>
+                                <div class="contact-detail-title text-light">Hosting A Custom Event?</div>
+                                <div class="contact-detail-desc">For private dining room rentals, banquets, and customized catering events, contact our support line directly.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-12 reveal-on-scroll">
+                    <div class="form-card-dark">
+                        <h4 class="font-heading text-gold mb-4 text-center">Reservation Request</h4>
+                        <form id="reservation-form" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group-custom">
+                                        <label for="res-name">Full Name *</label>
+                                        <input type="text" id="res-name" class="form-control-custom" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group-custom">
+                                        <label for="res-phone">Phone Number *</label>
+                                        <input type="tel" id="res-phone" class="form-control-custom" placeholder="10-Digit Mobile" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group-custom">
+                                <label for="res-email">Email Address (Optional)</label>
+                                <input type="email" id="res-email" class="form-control-custom" placeholder="name@email.com">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="form-group-custom">
+                                        <label for="res-date">Choose Date *</label>
+                                        <input type="date" id="res-date" class="form-control-custom" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="form-group-custom">
+                                        <label for="res-time">Seating Time *</label>
+                                        <select id="res-time" class="form-control-custom" required>
+                                            <option value="" disabled selected>Select Time</option>
+                                            <option value="11:30 AM">11:30 AM (Lunch)</option>
+                                            <option value="12:30 PM">12:30 PM (Lunch)</option>
+                                            <option value="01:30 PM">01:30 PM (Lunch)</option>
+                                            <option value="02:30 PM">02:30 PM (Lunch)</option>
+                                            <option value="07:00 PM">07:00 PM (Dinner)</option>
+                                            <option value="08:00 PM">08:00 PM (Dinner)</option>
+                                            <option value="09:00 PM">09:00 PM (Dinner)</option>
+                                            <option value="10:00 PM">10:00 PM (Dinner)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="form-group-custom">
+                                        <label for="res-guests">Guests *</label>
+                                        <input type="number" id="res-guests" class="form-control-custom" min="1" max="20" placeholder="Persons" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group-custom">
+                                <label for="res-request">Special Instructions / Dietary Requests</label>
+                                <textarea id="res-request" rows="3" class="form-control-custom" placeholder="E.g., Window seat, high chair for baby, vegetarian dishes priority..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-premium btn-premium-gold w-100 mt-2">Book Seating Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT US & MAP SECTION
+         ========================================== -->
+    <section id="contact">
+        <div class="container">
+            <div class="text-center mb-5 reveal-on-scroll">
+                <span class="text-red font-heading italic text-uppercase letter-spacing-1">Reach Our Team</span>
+                <h2 class="section-title text-dark">Contact Spice Garden</h2>
+            </div>
+
+            <div class="row g-5">
+                <!-- Location Details & Map -->
+                <div class="col-lg-6 col-sm-12 reveal-on-scroll">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="contact-detail-item">
+                                <i class="fa-solid fa-map-location-dot contact-detail-icon" aria-hidden="true"></i>
+                                <div>
+                                    <h5 class="contact-detail-title">Our Address</h5>
+                                    <address class="contact-detail-desc mb-0">
+                                        40-1-12, MG Road,<br>
+                                        Labbipet, Vijayawada,<br>
+                                        Andhra Pradesh - 520010
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="contact-detail-item">
+                                <i class="fa-solid fa-headset contact-detail-icon" aria-hidden="true"></i>
+                                <div>
+                                    <h5 class="contact-detail-title">Quick Contacts</h5>
+                                    <p class="contact-detail-desc mb-0">
+                                        <strong>Phone:</strong> +91 866 555 0199<br>
+                                        <strong>Mail:</strong> info@spicegardenvijayawada.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Embed Map Area -->
+                    <div class="map-iframe-container mt-4">
+                        <!-- Simulated realistic responsive Google map layout centered on Vijayawada Labbipet -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2974864452077!2d80.64332997576579!3d16.507317784236168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35effb46bfb073%3A0xe543df5e90d56ee1!2sLabbipet%2C%20Vijayawada%2C%20Andhra%20Pradesh%20520010!5e0!3m2!1sen!2sin!4v1724601234567!5m2!1sen!2sin" 
+                            width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map location of Spice Garden, Labbipet, Vijayawada"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="col-lg-6 col-sm-12 reveal-on-scroll">
+                    <div class="form-card">
+                        <h4 class="font-heading text-red mb-4 text-center">Inquiry Form</h4>
+                        <form id="contact-form" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group-custom">
+                                        <label for="contact-name" class="text-dark">Your Name *</label>
+                                        <input type="text" id="contact-name" class="form-control-custom" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group-custom">
+                                        <label for="contact-email" class="text-dark">Email *</label>
+                                        <input type="email" id="contact-email" class="form-control-custom" placeholder="Email Address" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group-custom">
+                                <label for="contact-subject" class="text-dark">Subject *</label>
+                                <input type="text" id="contact-subject" class="form-control-custom" placeholder="Topic of conversation" required>
+                            </div>
+
+                            <div class="form-group-custom">
+                                <label for="contact-message" class="text-dark">Message *</label>
+                                <textarea id="contact-message" rows="4" class="form-control-custom" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-premium btn-premium-red w-100 mt-2">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER SECTION
+         ========================================== -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="footer-logo" href="#home">
+                            <i class="fa-solid fa-seedling text-gold me-2" aria-hidden="true"></i>
+                            <span>Spice</span>Garden
+                        </a>
+                        <p class="mt-2 text-light-muted">Serving traditional recipes prepared with hand-ground spices and organic ingredients. The home of rich Indian, North/South Indian, and Chinese gastronomy.</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#menu">Our Menu</a></li>
+                            <li><a href="#gallery">Image Gallery</a></li>
+                            <li><a href="#reviews">Guest Reviews</a></li>
+                            <li><a href="#reservation">Book Table</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h4 class="footer-title">Opening Hours</h4>
+                        <ul class="footer-links text-light-muted">
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Monday - Friday</span>
+                                <span>11:00 AM - 11:00 PM</span>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Saturday</span>
+                                <span>11:00 AM - 11:30 PM</span>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Sunday</span>
+                                <span>11:00 AM - 11:30 PM</span>
+                            </li>
+                            <li class="d-flex justify-content-between mt-3 text-gold">
+                                <span>Delivery Timing</span>
+                                <span>11:30 AM - 10:30 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <h4 class="footer-title">Get In Touch</h4>
+                        <div class="footer-contact-item text-light-muted">
+                            <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+                            <span>40-1-12, MG Road, Labbipet, Vijayawada, Andhra Pradesh, 520010</span>
+                        </div>
+                        <div class="footer-contact-item text-light-muted">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <span>+91 866 555 0199</span>
+                        </div>
+                        <div class="footer-contact-item text-light-muted">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <span>info@spicegardenvijayawada.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p class="mb-0">&copy; 2026 Spice Garden Vijayawada. All Rights Reserved. Crafted with passion for fine dining.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         OFFCANVAS DRAWER: ONLINE ORDERING CART
+         ========================================== -->
+    <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="cartDrawerLabel">
+                <i class="fa-solid fa-utensils text-gold me-2"></i>Your Food Cart
+            </h5>
+            <button type="button" class="btn-close-cart" data-bs-dismiss="offcanvas" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        
+        <div class="offcanvas-body">
+            <!-- Dynamic Items Container -->
+            <div id="cart-items-list" class="cart-items-list">
+                <!-- Dynamically filled by JS -->
+            </div>
+
+            <!-- Totals Area -->
+            <div id="cart-summary-section" class="cart-summary d-none">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery Fee</span>
+                    <span id="cart-delivery">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>GST (5%)</span>
+                    <span id="cart-tax">₹0</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total Amount</span>
+                    <span id="cart-total" class="font-heading">₹0</span>
+                </div>
+                <small class="text-gold mt-2 d-block text-center">* Free delivery on orders above ₹500</small>
+            </div>
+
+            <!-- Checkout Details Form -->
+            <div id="checkout-section" class="checkout-section d-none">
+                <h6 class="checkout-title">Delivery Details</h6>
+                <form id="checkout-form" novalidate>
+                    <div class="form-group-custom">
+                        <label for="cust-name">Full Name *</label>
+                        <input type="text" id="cust-name" class="form-control-custom" placeholder="Enter recipient name" required>
+                    </div>
+                    <div class="form-group-custom">
+                        <label for="cust-phone">Phone Number *</label>
+                        <input type="tel" id="cust-phone" class="form-control-custom" placeholder="10-digit mobile number" required>
+                    </div>
+                    <div class="form-group-custom">
+                        <label for="cust-address">Delivery Address *</label>
+                        <textarea id="cust-address" rows="3" class="form-control-custom" placeholder="Complete apartment, street & landmark details" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-premium btn-premium-red w-100 mt-3">Place Order (Cash On Delivery)</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         CUSTOM FULL-SCREEN LIGHTBOX MODAL
+         ========================================== -->
+    <div id="customLightbox" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="prevLightbox()">&#10094;</span>
+        <span class="lightbox-nav lightbox-next" onclick="nextLightbox()">&#10095;</span>
+        
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Full Screen Lightbox View">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- ==========================================
+         FLOATING WIDGETS
+         ========================================== -->
+    <!-- WhatsApp Floating Action -->
+    <a href="https://wa.me/918665550199?text=Hello%20Spice%20Garden!%20I%20would%20like%20to%20inquire%20about%20your%20dining%20and%20catering%20packages." 
+       class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with Spice Garden on WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ==========================================
+         SUCCESS / INTERACTION MODALS
+         ========================================== -->
+    <!-- Table Reservation Confirm Modal -->
+    <div class="modal fade" id="bookingConfirmModal" tabindex="-1" aria-labelledby="bookingConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-confirm-content">
+                <div class="modal-header modal-confirm-header">
+                    <h5 class="modal-title font-heading text-gold" id="bookingConfirmModalLabel">Booking Confirmed!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="success-icon-wrapper">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h4 class="mb-3 text-light font-heading">Table Reserved Successfully!</h4>
+                    <p class="text-light-muted mb-4">A table reservation has been set under your details. Please show the receipt snippet below upon arriving.</p>
+                    
+                    <div id="booking-receipt" class="receipt-box text-start">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <div class="modal-footer modal-confirm-footer">
+                    <button type="button" class="btn btn-premium btn-premium-gold w-100" data-bs-dismiss="modal">Great, See You Soon!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Online Ordering Confirm Modal -->
+    <div class="modal fade" id="orderConfirmModal" tabindex="-1" aria-labelledby="orderConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-confirm-content">
+                <div class="modal-header modal-confirm-header">
+                    <h5 class="modal-title font-heading text-gold" id="orderConfirmModalLabel">Order Placed!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="success-icon-wrapper">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h4 class="mb-3 text-light font-heading">Order Received!</h4>
+                    <p class="text-light-muted mb-4">Your delicious food is being prepared and will be delivered within 30-40 minutes. Payment is Cash On Delivery (COD).</p>
+                    
+                    <div id="order-receipt" class="receipt-box text-start">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <div class="modal-footer modal-confirm-footer">
+                    <button type="button" class="btn btn-premium btn-premium-red w-100" data-bs-dismiss="modal">Track My Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Confirmation Modal -->
+    <div class="modal fade" id="contactConfirmModal" tabindex="-1" aria-labelledby="contactConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-confirm-content">
+                <div class="modal-header modal-confirm-header">
+                    <h5 class="modal-title font-heading text-gold" id="contactConfirmModalLabel">Message Sent!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="success-icon-wrapper">
+                        <i class="fa-solid fa-envelope-circle-check"></i>
+                    </div>
+                    <h4 class="mb-3 text-light font-heading">Inquiry Submitted!</h4>
+                    <p class="text-light-muted mb-0" id="contact-success-msg">
+                        <!-- Populated by JS -->
+                    </p>
+                </div>
+                <div class="modal-footer modal-confirm-footer">
+                    <button type="button" class="btn btn-premium btn-premium-gold w-100" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Custom Application Javascript -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
+
