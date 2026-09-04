@@ -11,10 +11,24 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                sh 'mvn clean package -DskipTests'
-            }
-        }
+    steps {
+        sh '''
+            echo "=== JAVA ==="
+            java -version
+
+            echo "=== JAVAC ==="
+            javac -version
+
+            echo "=== MAVEN ==="
+            mvn -version
+
+            echo "=== JAVA_HOME ==="
+            echo $JAVA_HOME
+
+            mvn clean package -DskipTests
+        '''
+    }
+}
 
         stage('Test') {
             steps {
