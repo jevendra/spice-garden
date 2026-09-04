@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/jevendra/spice-garden.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+    }
+
+    post {
+        success {
+            echo 'Spice Garden Pipeline SUCCESS!'
+        }
+
+        failure {
+            echo 'Spice Garden Pipeline FAILED!'
+        }
+    }
+}
