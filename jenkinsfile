@@ -41,7 +41,8 @@ pipeline {
                 sh '''
                     docker build -t spice-garden:latest -f dockerfile .
 
-                    docker tag spice-garden:latest 037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
+                    docker tag spice-garden:latest \
+                    037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
                 '''
             }
         }
@@ -49,58 +50,70 @@ pipeline {
         stage('ECR Push') {
             steps {
                 sh '''
-                    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 037547369119.dkr.ecr.us-east-1.amazonaws.com
+                    aws ecr get-login-password --region us-east-1 | \
+                    docker login --username AWS --password-stdin \
+                    037547369119.dkr.ecr.us-east-1.amazonaws.com
 
-                    docker push 037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
+                    docker push \
+                    037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
                 '''
             }
         }
 
         stage('Docker Hub Push') {
-    steps {
-        withCredentials([usernamePassword(
-            credentialsId: 'dockerhub-creds',
-            usernameVariable: 'DOCKER_USERNAME',
-            passwordVariable: 'DOCKER_PASSWORD'
-        )]) {
-            sh '''
-                echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+            steps {
+                withCredentials([usernamePassword(
+                    credentialsId: 'dockerhub-creds',
+                    usernameVariable: 'DOCKER_USERNAME',
+                    passwordVariable: 'DOCKER_PASSWORD'
+                )]) {
 
-                docker tag spice-garden:latest jevendra1/spice-garden:latest
+                    sh '''
+                        echo "$DOCKER_PASSWORD" | \
+                        docker login -u "$DOCKER_USERNAME" --password-stdin
 
-                docker push jevendra1/spice-garden:latest
+                        docker tag spice-garden:latest \
+                        jevendra1/spice-garden:latest
 
-                docker logout
-            '''
+                        docker push jevendra1/spice-garden:latest
+
+                        docker logout
+                    '''
+                }
+            }
+        }
+
+        stage('Docker Deploy') {
+            steps {
+                sh '''
+                    echo "=== Pull Latest Docker Image ==="
+
+                    docker pull jevendra1/spice-garden:latest
+
+                    echo "=== Stop Old Container ==="
+
+                    docker stop spice-garden || true
+                    docker rm spice-garden || true
+
+                    echo "=== Start New Container ==="
+
+                    docker run -d \
+                        --name spice-garden \
+                        -p 8080:8080 \
+                        jevendra1/spice-garden:latest
+
+                    echo "=== Container Status ==="
+
+                    docker ps
+                '''
+            }
         }
     }
-}
 
-    }
-
-
-     stage('Docker Deploy') {
-    steps {
-        sh '''
-            docker pull jevendra1/spice-garden:latest
-
-            docker stop spice-garden || true
-            docker rm spice-garden || true
-
-            docker run -d \
-                --name spice-garden \
-                -p 8080:8080 \
-                jevendra1/spice-garden:latest
-
-            docker ps
-        '''
-    }
-}
-
-  post {
+    post {
 
         success {
-            echo 'Spice Garden Pipeline SUCCESS!'
+            echo 'Spice Garden CI/CD Pipeline SUCCESS!'
         }
 
         failure {
