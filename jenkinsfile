@@ -78,7 +78,26 @@ pipeline {
 
     }
 
-    post {
+
+     stage('Docker Deploy') {
+    steps {
+        sh '''
+            docker pull jevendra1/spice-garden:latest
+
+            docker stop spice-garden || true
+            docker rm spice-garden || true
+
+            docker run -d \
+                --name spice-garden \
+                -p 8080:8080 \
+                jevendra1/spice-garden:latest
+
+            docker ps
+        '''
+    }
+}
+
+  post {
 
         success {
             echo 'Spice Garden Pipeline SUCCESS!'
