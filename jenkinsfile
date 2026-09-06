@@ -40,6 +40,7 @@ pipeline {
             steps {
                 sh '''
                     docker build -t spice-garden:latest -f dockerfile .
+
                     docker tag spice-garden:latest 037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
                 '''
             }
@@ -49,22 +50,25 @@ pipeline {
             steps {
                 sh '''
                     aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 037547369119.dkr.ecr.us-east-1.amazonaws.com
+
                     docker push 037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
                 '''
             }
         }
-    }
-    
-    stage('Docker Hub Push') {
-    steps {
-        sh '''
-            docker tag spice-garden:latest jevendra1/spice-garden:latest
-            docker push jevendra1/spice-garden:latest
-        '''
-    }
-}
 
-post {
+        stage('Docker Hub Push') {
+            steps {
+                sh '''
+                    docker tag spice-garden:latest jevendra1/spice-garden:latest
+
+                    docker push jevendra1/spice-garden:latest
+                '''
+            }
+        }
+    }
+
+    post {
+
         success {
             echo 'Spice Garden Pipeline SUCCESS!'
         }
