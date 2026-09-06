@@ -57,14 +57,32 @@ pipeline {
         }
 
         stage('Docker Hub Push') {
-            steps {
-                sh '''
-                    docker tag spice-garden:latest jevendra1/spice-garden:latest
+    steps {
+        withCredentials([usernamePassword(
+            credentialsId: 'dockerhub-creds',
+            usernameVariable: 'jevendra1',
+            passwordVariable: 'HPSK-DBFV'
+        )]) {
+            sh '''
+                echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
-                    docker push jevendra1/spice-garden:latest
-                '''
-            }
+                docker tag spice-garden:latest jevendra1/spice-garden:latest
+
+                docker push jevendra1/spice-garden:latest
+
+                docker logout
+            '''
         }
+    }
+}
+
+
+
+
+
+
+
+
     }
 
     post {
