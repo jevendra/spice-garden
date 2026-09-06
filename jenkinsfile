@@ -11,51 +11,49 @@ pipeline {
         }
 
         stage('Build') {
-    steps {
-        sh '''
-            echo "=== JAVA ==="
-            java -version
+            steps {
+                sh '''
+                    echo "=== JAVA ==="
+                    java -version
 
-            echo "=== JAVAC ==="
-            javac -version
+                    echo "=== JAVAC ==="
+                    javac -version
 
-            echo "=== MAVEN ==="
-            mvn -version
+                    echo "=== MAVEN ==="
+                    mvn -version
 
-            echo "=== JAVA_HOME ==="
-            echo $JAVA_HOME
+                    echo "=== JAVA_HOME ==="
+                    echo $JAVA_HOME
 
-            mvn clean package -DskipTests
-        '''
-    }
-}
+                    mvn clean package -DskipTests
+                '''
+            }
+        }
 
         stage('Test') {
             steps {
                 sh 'mvn test'
             }
         }
-stage('Docker Build') {
-    steps {
-        sh '''
-            docker build -t spice-garden:latest -f dockerfile .
-            docker tag spice-garden:latest 037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
-        '''
-    }
-}
 
-stage('ECR Push') {
-    steps {
-        sh '''
-            aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 037547369119.dkr.ecr.us-east-1.amazonaws.com
-            docker push 037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
-        '''
-    }
-}
+        stage('Docker Build') {
+            steps {
+                sh '''
+                    docker build -t spice-garden:latest -f dockerfile .
+                    docker tag spice-garden:latest 037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
+                '''
+            }
         }
 
+        stage('ECR Push') {
+            steps {
+                sh '''
+                    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 037547369119.dkr.ecr.us-east-1.amazonaws.com
+                    docker push 037547369119.dkr.ecr.us-east-1.amazonaws.com/spice-garden:latest
+                '''
+            }
+        }
     }
-
 
     post {
         success {
@@ -66,3 +64,4 @@ stage('ECR Push') {
             echo 'Spice Garden Pipeline FAILED!'
         }
     }
+}
