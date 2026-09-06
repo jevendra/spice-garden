@@ -54,8 +54,17 @@ pipeline {
             }
         }
     }
+    
+    stage('Docker Hub Push') {
+    steps {
+        sh '''
+            docker tag spice-garden:latest jevendra1/spice-garden:latest
+            docker push jevendra1/spice-garden:latest
+        '''
+    }
+}
 
-    post {
+post {
         success {
             echo 'Spice Garden Pipeline SUCCESS!'
         }
