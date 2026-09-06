@@ -66,4 +66,3 @@ stage('ECR Push') {
             echo 'Spice Garden Pipeline FAILED!'
         }
     }
-}
